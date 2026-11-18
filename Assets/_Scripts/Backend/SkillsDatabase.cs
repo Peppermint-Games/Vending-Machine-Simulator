@@ -6,7 +6,6 @@ public class SkillsDatabase
     {
         skillDat newS = new skillDat();
         newS.id = id;
-        newS.prevSkill = 0;
         switch (id)
         {
             case 000:
@@ -14,35 +13,46 @@ public class SkillsDatabase
                 newS.skillName = "Skills";
                 newS.description = "Unlock Skills";
                 newS.type = skillType.Utility;
+                newS.skillCost = 10;
                 break;
             case 001:
                 newS.skillName = "Camera";
                 newS.description = "Unlock Camera";
                 newS.type = skillType.Utility;
+                newS.skillCost = 10;
                 break;
             case 002:
                 newS.prevSkill = 1;
                 newS.skillName = "PTZ Camera";
                 newS.description = "Unlock moveable Camera";
                 newS.type = skillType.Utility;
+                newS.skillCost = 10;
                 break;
             case 003:
                 newS.prevSkill = 0;
                 newS.skillName = "Network Scan";
                 newS.description = "Scan the local network for machine options";
                 newS.type = skillType.Power;
+                newS.skillCost = 100;
+                newS.pCost = 100;
                 break;
             case 004:
                 newS.prevSkill = 3;
                 newS.skillName = "GPS Scan";
                 newS.description = "Scan the local area for machine options";
                 newS.type = skillType.Power;
+                newS.skillCost = 1000;
+                newS.pCost = 100;
+                newS.replaces = 3;
                 break;
             case 005:
                 newS.prevSkill = 3;
                 newS.skillName = "Possession";
                 newS.description = "Possess target machine";
                 newS.type = skillType.Power;
+                newS.autoUnlock = true;
+                newS.skillCost = 0;
+                newS.pCost = 500;
                 break;
         }
         return newS;
