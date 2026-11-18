@@ -60,7 +60,8 @@ public class SkillsDBManager : MonoBehaviour
 }
 public class skillDat
 {
-    public int id, prevSkill;
+    public int id, prevSkill, skillCost, pCost = 0;
     public string skillName, description;
     public skillType type;
+    public bool autoUnlock = false;
 }
