@@ -64,4 +64,5 @@ public class skillDat
     public string skillName, description;
     public skillType type;
     public bool autoUnlock = false;
+    public vendingType vType = vType.Generic;
 }
