@@ -10,3 +10,10 @@ public enum skillLockType
     Unlockable,
     Unlocked
 }
+public enum vendingType
+{
+    Generic,
+    Car,
+    Food,
+    Drink
+}
