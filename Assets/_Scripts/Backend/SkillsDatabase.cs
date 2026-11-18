@@ -29,7 +29,6 @@ public class SkillsDatabase
                 newS.skillCost = 10;
                 break;
             case 003:
-                newS.prevSkill = 0;
                 newS.skillName = "Network Scan";
                 newS.description = "Scan the local network for machine options";
                 newS.type = skillType.Power;
@@ -53,6 +52,12 @@ public class SkillsDatabase
                 newS.autoUnlock = true;
                 newS.skillCost = 0;
                 newS.pCost = 500;
+                break;
+            case 006:
+                newS.skillName = "Upgrades";
+                newS.description = "Unlocks the ability to upgrade individual machines";
+                newS.type = skillType.Utility;
+                newS.skillCost = 250;
                 break;
         }
         return newS;
