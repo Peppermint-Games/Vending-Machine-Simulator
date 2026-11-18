@@ -2,7 +2,8 @@
 {
     Utility,
     Sales,
-    Investigation
+    Investigation,
+    Power
 }
 public enum skillLockType
 {
