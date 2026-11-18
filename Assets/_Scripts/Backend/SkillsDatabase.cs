@@ -26,6 +26,24 @@ public class SkillsDatabase
                 newS.description = "Unlock moveable Camera";
                 newS.type = skillType.Utility;
                 break;
+            case 003:
+                newS.prevSkill = 0;
+                newS.skillName = "Network Scan";
+                newS.description = "Scan the local network for machine options";
+                newS.type = skillType.Power;
+                break;
+            case 004:
+                newS.prevSkill = 3;
+                newS.skillName = "GPS Scan";
+                newS.description = "Scan the local area for machine options";
+                newS.type = skillType.Power;
+                break;
+            case 005:
+                newS.prevSkill = 3;
+                newS.skillName = "Possession";
+                newS.description = "Possess target machine";
+                newS.type = skillType.Power;
+                break;
         }
         return newS;
     }
