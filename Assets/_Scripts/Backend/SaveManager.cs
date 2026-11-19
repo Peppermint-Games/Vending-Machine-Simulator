@@ -26,8 +26,22 @@ public static class SaveManager
     public static saveData newSave()
     {
         saveData newS = new saveData();
+        newS.inventory.inventory.Add(new itemSave { id = 0, count = 10 });
+        newS.inventory.inventory.Add(new itemSave { id = 1, count = 10 });
+        newS.inventory.inventory.Add(new itemSave { id = 2, count = 10 });
+        newS.inventory.inventory.Add(new itemSave { id = 3, count = 10 });
+        newS.inventory.inventory.Add(new itemSave { id = 4, count = 10 });
+        newS.inventory.inventory.Add(new itemSave { id = 5, count = 10 });
+        newS.inventory.inventory.Add(new itemSave { id = 6, count = 10 });
+        newS.inventory.inventory.Add(new itemSave { id = 7, count = 10 });
+        newS.inventory.inventory.Add(new itemSave { id = 8, count = 10 });
+        newS.inventory.inventory.Add(new itemSave { id = 9, count = 10 });
+        newS.inventory.unlockedItems.AddRange(System.Linq.Enumerable.Range(0, 10));
+        newS.lastVendingMachine = 0;
+        newS.machines.Add(new vendingData { id = 0, baseItems = (int[])startingInv.Clone(), nextItems = (int[])startingInv.Clone(), isUnlocked = true, upgrades = new System.Collections.Generic.List<skillsSave>() });
         return newS;
     }
+    public static readonly int[] startingInv = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
     public static void SaveSettings()
     {
         settingsData newS = new settingsData();
