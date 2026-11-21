@@ -8,7 +8,7 @@ public class saveData
 {
     public List<int> skillsBook = new List<int>();
     public List<vendingData> machines = new List<vendingData>();
-    public invData inventory;
+    public invData inventory = new invData();
     public int lastVendingMachine;
 }
 [Serializable]
@@ -41,4 +41,10 @@ public class vendingData
     public int[] baseItems = new int[10], nextItems = new int[10];
     public bool isUnlocked;
     public List<skillsSave> upgrades = new List<skillsSave>();
+}
+[Serializable]
+public class itemRef
+{
+    public itemData data;
+    public Sprite refImg;
 }
